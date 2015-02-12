@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BCGtest", "BCGtest\BCGtest.vcxproj", "{C813D55F-3C9C-4CDD-8CCE-A5B092C88491}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MFC-SDOC", "MFCSM\MFCSM.vcxproj", "{77F9F764-0FF1-4ACB-8084-5FAD6352FD46}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MFC-DLG", "MFC-DLG\MFC-DLG.vcxproj", "{513E9BBF-2197-473A-A04E-3F5D10CA2396}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C813D55F-3C9C-4CDD-8CCE-A5B092C88491}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C813D55F-3C9C-4CDD-8CCE-A5B092C88491}.Debug|Win32.Build.0 = Debug|Win32
+		{C813D55F-3C9C-4CDD-8CCE-A5B092C88491}.Release|Win32.ActiveCfg = Release|Win32
+		{C813D55F-3C9C-4CDD-8CCE-A5B092C88491}.Release|Win32.Build.0 = Release|Win32
+		{77F9F764-0FF1-4ACB-8084-5FAD6352FD46}.Debug|Win32.ActiveCfg = Debug|Win32
+		{77F9F764-0FF1-4ACB-8084-5FAD6352FD46}.Debug|Win32.Build.0 = Debug|Win32
+		{77F9F764-0FF1-4ACB-8084-5FAD6352FD46}.Release|Win32.ActiveCfg = Release|Win32
+		{77F9F764-0FF1-4ACB-8084-5FAD6352FD46}.Release|Win32.Build.0 = Release|Win32
+		{513E9BBF-2197-473A-A04E-3F5D10CA2396}.Debug|Win32.ActiveCfg = Debug|Win32
+		{513E9BBF-2197-473A-A04E-3F5D10CA2396}.Debug|Win32.Build.0 = Debug|Win32
+		{513E9BBF-2197-473A-A04E-3F5D10CA2396}.Release|Win32.ActiveCfg = Release|Win32
+		{513E9BBF-2197-473A-A04E-3F5D10CA2396}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
