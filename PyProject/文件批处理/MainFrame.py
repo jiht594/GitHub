@@ -140,7 +140,7 @@ class Frame1(wx.Frame):
                 if btnResult == wx.OK :
                     fileoperator.clearfiles(copy.copy(self.pickedDir), filetypes)
                     fileoperator.clearfiles(copy.copy(self.pickedDir), filetypes)    
-                    wx.MessageBox(u"重命名完毕", 'INFO')                
+                    wx.MessageBox(u"删除完毕", 'INFO')                
             else :
                 wx.MessageBox(u"请输入要删除的文件后缀(eg:.txt, .rmvb)", 'INFO')   
         else :

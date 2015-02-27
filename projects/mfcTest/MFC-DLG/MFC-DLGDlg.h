@@ -22,7 +22,7 @@ public:
 // Implementation
 protected:
 	HICON m_hIcon;
-
+	CMonthCalCtrl m_mouthcalctrl;
 	// Generated message map functions
 	virtual BOOL OnInitDialog();
 	afx_msg void OnSysCommand(UINT nID, LPARAM lParam);

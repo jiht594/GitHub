@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="res\Asqare.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\Asqare.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\Background.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ButtonBackground\1.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ButtonBackground\1-1.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ButtonBackground\2.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ButtonBackground\2-2.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ButtonBackground\3.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ButtonBackground\3-3.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ButtonBackground\4.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ButtonBackground\4-4.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ButtonBackground\5.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ButtonBackground\5-5.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ButtonBackground\6.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ButtonBackground\6-6.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ButtonBackground\7.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ButtonBackground\7-7.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ButtonBackground\8.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ButtonBackground\8-8.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ButtonBackground\9.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ButtonBackground\9-9.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ButtonBackground\10.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ButtonBackground\10-10.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ButtonBackground\11.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ButtonBackground\11-11.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ButtonBackground\12.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ButtonBackground\12-12.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ButtonBackground\13.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ButtonBackground\13-13.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ButtonBackground\14.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ButtonBackground\14-14.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ButtonBackground\15.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ButtonBackground\15-15.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ButtonBackground\16.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ButtonBackground\16-16.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ButtonBackground\17.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ButtonBackground\17-17.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ButtonBackground\18.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ButtonBackground\18-18.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ButtonBackground\19.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ButtonBackground\19-19.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ButtonBackground\20.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ButtonBackground\20-20.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Asqare.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AsqareDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Bricks.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DEFFFFFF.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="NoFalshButton.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LogUtility.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MyMCIWave.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Asqare.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AsqareDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Bricks.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="NoFalshButton.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LogUtility.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MyMCIWave.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Asqare.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

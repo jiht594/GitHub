@@ -37,7 +37,7 @@ def VisitDir(arg, dirname, names):
             #if g_rootpath != dirname:
                 #print "(()())()()" + dirname
             #print dirname
-            extname = os.path.splitext(filespath)
+            extname = os.path.splitext(fullpath)
             if extname[1] in g_filetypesList :
                 os.remove(fullpath)    
                 print "delete" + fullpath
@@ -182,7 +182,7 @@ g_filenameTruc = []
 
 if __name__ == "__main__":
     global g_filetypes
-    clearfiles(g_filetypes)
+    clearfiles(g_filetypes, '')
     #g_rootpath = u"D:\\新建文件夹"
     #os.path.walk(g_rootpath, VisitDir,())
     #os.path.walk(g_rootpath, VisitDirNoSubDir, ())

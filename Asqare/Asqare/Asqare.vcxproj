@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7CC22D78-273C-448F-B5B3-F92523AB007C}</ProjectGuid>
+    <RootNamespace>Asqare</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <EnablePREfast>true</EnablePREfast>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="res\Asqare.ico" />
+    <None Include="res\Asqare.rc2" />
+    <None Include="res\Background.bmp" />
+    <None Include="res\ButtonBackground\1-1.bmp" />
+    <None Include="res\ButtonBackground\1.bmp" />
+    <None Include="res\ButtonBackground\10-10.bmp" />
+    <None Include="res\ButtonBackground\10.bmp" />
+    <None Include="res\ButtonBackground\11-11.bmp" />
+    <None Include="res\ButtonBackground\11.bmp" />
+    <None Include="res\ButtonBackground\12-12.bmp" />
+    <None Include="res\ButtonBackground\12.bmp" />
+    <None Include="res\ButtonBackground\13-13.bmp" />
+    <None Include="res\ButtonBackground\13.bmp" />
+    <None Include="res\ButtonBackground\14-14.bmp" />
+    <None Include="res\ButtonBackground\14.bmp" />
+    <None Include="res\ButtonBackground\15-15.bmp" />
+    <None Include="res\ButtonBackground\15.bmp" />
+    <None Include="res\ButtonBackground\16-16.bmp" />
+    <None Include="res\ButtonBackground\16.bmp" />
+    <None Include="res\ButtonBackground\17-17.bmp" />
+    <None Include="res\ButtonBackground\17.bmp" />
+    <None Include="res\ButtonBackground\18-18.bmp" />
+    <None Include="res\ButtonBackground\18.bmp" />
+    <None Include="res\ButtonBackground\19-19.bmp" />
+    <None Include="res\ButtonBackground\19.bmp" />
+    <None Include="res\ButtonBackground\2-2.bmp" />
+    <None Include="res\ButtonBackground\2.bmp" />
+    <None Include="res\ButtonBackground\20-20.bmp" />
+    <None Include="res\ButtonBackground\20.bmp" />
+    <None Include="res\ButtonBackground\3-3.bmp" />
+    <None Include="res\ButtonBackground\3.bmp" />
+    <None Include="res\ButtonBackground\4-4.bmp" />
+    <None Include="res\ButtonBackground\4.bmp" />
+    <None Include="res\ButtonBackground\5-5.bmp" />
+    <None Include="res\ButtonBackground\5.bmp" />
+    <None Include="res\ButtonBackground\6-6.bmp" />
+    <None Include="res\ButtonBackground\6.bmp" />
+    <None Include="res\ButtonBackground\7-7.bmp" />
+    <None Include="res\ButtonBackground\7.bmp" />
+    <None Include="res\ButtonBackground\8-8.bmp" />
+    <None Include="res\ButtonBackground\8.bmp" />
+    <None Include="res\ButtonBackground\9-9.bmp" />
+    <None Include="res\ButtonBackground\9.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Asqare.h" />
+    <ClInclude Include="AsqareDlg.h" />
+    <ClInclude Include="Bricks.h" />
+    <ClInclude Include="DEFFFFFF.h" />
+    <ClInclude Include="LogUtility.h" />
+    <ClInclude Include="MyMCIWave.h" />
+    <ClInclude Include="NoFalshButton.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Asqare.cpp" />
+    <ClCompile Include="AsqareDlg.cpp" />
+    <ClCompile Include="Bricks.cpp" />
+    <ClCompile Include="LogUtility.cpp" />
+    <ClCompile Include="MyMCIWave.cpp" />
+    <ClCompile Include="NoFalshButton.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Asqare.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="Asqare.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -98,8 +98,14 @@ BOOL CMFCDLGDlg::OnInitDialog()
 	SetIcon(m_hIcon, TRUE);			// Set big icon
 	SetIcon(m_hIcon, FALSE);		// Set small icon
 
-	// TODO: Add extra initialization here
+	m_mouthcalctrl.Create(WS_TABSTOP | WS_CHILD | WS_BORDER | MCS_SHORTDAYSOFWEEK | MCS_NOTRAILINGDATES | MCS_NOTODAY | MCS_WEEKNUMBERS, CPoint(2, 2), this, 10000);
 
+	DWORD dw = 0;
+	dw = m_mouthcalctrl.SetColor(MCSC_MONTHBK, 0xFF0000);
+	dw = m_mouthcalctrl.SetColor(MCSC_TITLETEXT, 0xFF0000);
+	dw = m_mouthcalctrl.SetColor(MCSC_BACKGROUND, 0xFF0000);
+	MonthCal_SetColor(m_mouthcalctrl.GetSafeHwnd(), MCSC_MONTHBK, 0xFF0000);
+	m_mouthcalctrl.ShowWindow(SW_SHOW);
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
 
