@@ -1,7 +1,7 @@
 // console.cpp : Defines the entry point for the console application.
 //
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include <Windows.h>
 #include <string>
 #include <locale.h>
@@ -10,9 +10,16 @@
 #include "comm.h"
 #include "SingletonApp.h"
 #include "AccessControl.h"
+#include <sstream>
+
+using namespace std;
 
 int _tmain(int argc, _TCHAR* argv[])
 {
+	UNREFERENCED_PARAMETER(argc);
+	UNREFERENCED_PARAMETER(argv);
+
+
     char *p = "123Ë¹µÙ·Ò456";
     wchar_t *pwstr = StringUtility::AnsiToUnicode(p);
     wchar_t *p2 = _T("123Ë¹µÙ·Ò456");
@@ -31,56 +38,32 @@ int _tmain(int argc, _TCHAR* argv[])
     }
     //system("pause");
     SingletonApp::release();
-    //AccessControl ac;
-    //ac.isAdmin();
-    HANDLE hToken = NULL;
 
-    // Get current process token
-    if (!OpenProcessToken(GetCurrentProcess(), TOKEN_QUERY, &hToken))
-        return(FALSE);
-    bool bAdmin = false;
-    DWORD dwSize = 0;
-    TOKEN_ELEVATION_TYPE tokenEleType = TokenElevationTypeDefault;
-    TOKEN_ELEVATION_TYPE *pTokenEleType = &tokenEleType;
-    if (GetTokenInformation(hToken, TokenElevationType, pTokenEleType, sizeof(TOKEN_ELEVATION_TYPE), &dwSize))
-    {
-        //LogUtility::showSystemError();
-        PSID pSID = (PSID)new BYTE[SECURITY_MAX_SID_SIZE];
-        SecureZeroMemory(pSID, SECURITY_MAX_SID_SIZE);
-        DWORD cbSid;
-        
-        CreateWellKnownSid(WinBuiltinAdministratorsSid, NULL, pSID, &cbSid);
-        
-        BOOL bMember = FALSE;
-        if (tokenEleType == TokenElevationTypeLimited)
-        {
-            TOKEN_LINKED_TOKEN tlt;
-            SecureZeroMemory(&tlt, sizeof(tlt));
-            if (GetTokenInformation(hToken, TokenLinkedToken, &tlt, sizeof(TOKEN_LINKED_TOKEN), &dwSize))
-            {
-                if ( CheckTokenMembership(tlt.LinkedToken, pSID,& bMember))
-                {
-                   bAdmin = true;;
-                }
-                
-            }
-        }
-        else
-        {
-            if (IsUserAnAdmin())
-                bAdmin = true;
-        }
-        LogUtility::showSystemError();
-        if (bAdmin)
-        {
-            LogUtility::showMessageInConsole(_T("true\n"));
-        }
-        
-        delete[] pSID;
-        pSID = NULL;
-    }
-    
-    
+
+	TOKEN_ELEVATION_TYPE t;
+	BOOL pIsAdmin = FALSE;
+    AccessControl ac;
+	if (ac.getProcessElevation(&t, &pIsAdmin))
+	{
+		if (pIsAdmin == TRUE)
+		{
+			printf("user is an administrator\n");
+			if (t == TokenElevationTypeLimited)
+			{
+				printf("but process don't have the administrator rights");
+			}
+			else
+			{
+				printf("and process do have the administrator rights");
+			}
+		}
+	}
+	else
+	{
+		printf("getProcessElevation failed\n");
+	}
+	
+	system("pause");
 	return 0;
 }
 

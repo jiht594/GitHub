@@ -1,4 +1,4 @@
-
+﻿
 // MFC-DLGDlg.cpp : implementation file
 //
 
@@ -6,7 +6,6 @@
 #include "MFC-DLG.h"
 #include "MFC-DLGDlg.h"
 #include "afxdialogex.h"
-
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
@@ -97,8 +96,9 @@ BOOL CMFCDLGDlg::OnInitDialog()
 	//  when the application's main window is not a dialog
 	SetIcon(m_hIcon, TRUE);			// Set big icon
 	SetIcon(m_hIcon, FALSE);		// Set small icon
-
+	Button_SetElevationRequiredState(GetDlgItem(IDC_BUTTON1)->GetSafeHwnd(), TRUE);
 	m_mouthcalctrl.Create(WS_TABSTOP | WS_CHILD | WS_BORDER | MCS_SHORTDAYSOFWEEK | MCS_NOTRAILINGDATES | MCS_NOTODAY | MCS_WEEKNUMBERS, CPoint(2, 2), this, 10000);
+
 
 	DWORD dw = 0;
 	dw = m_mouthcalctrl.SetColor(MCSC_MONTHBK, 0xFF0000);
@@ -162,6 +162,10 @@ HCURSOR CMFCDLGDlg::OnQueryDragIcon()
 
 void CMFCDLGDlg::OnBnClickedButton1()
 {
+
+	CFileDialog fileDlg( TRUE, NULL, NULL, OFN_HIDEREADONLY | OFN_OVERWRITEPROMPT | OFN_EXPLORER );
+	fileDlg.DoModal();
+	//fileDlg.GetDlgItem(1);s
     CString cmdLine = _T("cmd.exe dir");
     SECURITY_ATTRIBUTES sa={sizeof ( sa ),NULL,TRUE};  
     SECURITY_ATTRIBUTES *psa=NULL;  
@@ -176,7 +180,7 @@ void CMFCDLGDlg::OnBnClickedButton1()
             dwShareMode|=FILE_SHARE_DELETE;  
         }  
     }  
-    //���ݰ汾���ù���ģʽ�Ͱ�ȫ����  
+    //根据版本设置共享模式和安全属性  
     HANDLE hConsoleRedirect=CreateFile (  
         _T("D:\\1s.txt"),  
         GENERIC_WRITE,  
@@ -188,22 +192,22 @@ void CMFCDLGDlg::OnBnClickedButton1()
     ASSERT ( hConsoleRedirect!=INVALID_HANDLE_VALUE );  
     STARTUPINFO s={sizeof ( s ) };  
     s.dwFlags =STARTF_USESHOWWINDOW|STARTF_USESTDHANDLES;  
-    //ʹ�ñ�׼������ʾ����  
-    s.hStdOutput =hConsoleRedirect;//���ļ���Ϊ��׼������  
-    s.wShowWindow =SW_SHOW;//���ؿ���̨����  
+    //使用标准柄和显示窗口  
+    s.hStdOutput =hConsoleRedirect;//将文件作为标准输出句柄  
+    s.wShowWindow =SW_SHOW;//隐藏控制台窗口  
     PROCESS_INFORMATION pi={0};  
     if ( CreateProcess ( NULL,cmdLine.GetBuffer(),NULL,NULL,TRUE,CREATE_NEW_CONSOLE,NULL,NULL,&s,&pi ) )  
     {  
-        //��������,ִ��Ping����,���������Ƿ���ͨ  
+        //创建进程,执行Ping程序,测试网络是否连通  
         WaitForSingleObject ( pi.hProcess ,INFINITE );  
-        //�ȴ�����ִ�����  
+        //等待进程执行完毕  
         CloseHandle ( pi.hProcess );  
         CloseHandle ( pi.hThread );  
-        //�رս��̺����߳̾��  
+        //关闭进程和主线程句柄  
     }  
     cmdLine.ReleaseBuffer();
     CloseHandle ( hConsoleRedirect );  
-    //�رտ���̨��������ļ����  
+    //关闭控制台定向输出文件句柄  
     CFile myFile ( _T("D:\\1.txt"),CFile::modeRead );  
     ASSERT ( myFile.m_hFile!=NULL );  
     TCHAR * pszNetStatus=new TCHAR[myFile.GetLength () +1];  
