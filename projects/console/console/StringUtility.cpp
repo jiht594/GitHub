@@ -36,6 +36,7 @@ char* StringUtility::UnicodeToAnsi(const wchar_t *pStr)
     char *pStrOut = NULL;
     int iCount = 0;
     int iSize = 0;
+	UNREFERENCED_PARAMETER(iSize);
     if (pStr)
     {
         iCount = WideCharToMultiByte(CP_ACP, 0, pStr, -1, NULL, 0, NULL, NULL);

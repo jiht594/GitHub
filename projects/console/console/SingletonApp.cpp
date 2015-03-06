@@ -133,6 +133,7 @@ int SingletonApp::createNamespace(const TCHAR *spaceName)
 }
 bool SingletonApp::checkSingletonObject(const TCHAR *spaceName, const TCHAR * mutexName)
 {
+	UNREFERENCED_PARAMETER(mutexName);
     bool bExist = false;
     // Try to create the mutex object with a name 
     // based on the private namespace 
